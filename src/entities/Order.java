@@ -1,15 +1,16 @@
 package entities;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import enums.Status;
 
 public class Order {
     private Long id;
     private Client client;
-    private List<Product> products = new ArrayList<>();
+    private Set<Product> products = new HashSet<>();
     private LocalDate orderDate;
     private Status status;
     
@@ -47,7 +48,7 @@ public class Order {
     public void setStatus(Status status) {
         this.status = status;
     }
-    public List<Product> getProducts() {
+    public Set<Product> getProducts() {
         return products;
     }
 
